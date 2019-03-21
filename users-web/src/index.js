@@ -5,13 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import './index.css';
 
+import { AuthStore, AuthContext} from './contexts/AuthStore'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
-    <App />
+    <AuthStore>
+      <App></App>
+    </AuthStore>
   </Router>,
   document.getElementById('root'));
 
